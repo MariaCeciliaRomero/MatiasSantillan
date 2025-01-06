@@ -1,286 +1,227 @@
-/* Estilos generales */
+/* Estilos globales */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    line-height: 1.6;
-    padding-top: 80px; /* Espacio para la barra de navegación fija */
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+h1, h2, h3 {
+    color: #64b5f6;
 }
 
-/* Encabezado y navegación */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Barra de navegación */
 header {
-    background-color: #1a1a1a; /* Fondo negro oscuro */
-    color: white;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #1a1a1a;
+    padding: 10px 20px;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    list-style: none;
 }
 
-nav li {
-    margin: 0 20px;
+nav ul li {
+    margin: 0 15px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+nav ul li a {
     font-size: 18px;
-    transition: color 0.3s ease;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #005f6b; /* Azul más oscuro */
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
 /* Sección de bienvenida */
 #bienvenida {
+    background: linear-gradient(to bottom, #000000, #333333);
     text-align: center;
-    background: linear-gradient(135deg, #1e2a47, #2c3e6f); /* Gradiente azul oscuro */
-    color: white;
-    padding: 150px 20px 50px 20px;
-    background-size: cover;
+    padding: 50px 20px;
 }
 
 #bienvenida h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 #bienvenida p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    background-color: #007b8a; /* Azul oscuro */
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
+    display: inline-block;
+    background-color: #64b5f6;
+    padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #121212;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background-color: #005f6b;
-    transform: scale(1.05);
+    background-color: #ffcc00;
 }
 
 /* Sección de servicios */
 #servicios {
-    background-color: #1a1a1a; /* Fondo negro oscuro */
-    padding: 60px 20px;
+    background-color: #1a1a1a;
+    padding: 50px 20px;
     text-align: center;
 }
 
 #servicios h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #e0e0e0; /* Texto claro */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .servicios-lista {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 20px;
+    padding: 0 20px;
 }
 
 .servicio {
-    background-color: #2c3e6f; /* Azul oscuro */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .servicio h3 {
-    font-size: 24px;
-    color: #f39c12; /* Amarillo cálido */
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .servicio p {
-    font-size: 16px;
-    color: #dcdcdc;
-}
-
-.servicio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
 }
 
 /* Sección de experiencia */
 #experiencia {
-    background-color: #1a1a1a; /* Fondo negro oscuro */
-    padding: 60px 20px;
+    background-color: #121212;
+    padding: 50px 20px;
     text-align: center;
 }
 
 #experiencia h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #e0e0e0; /* Texto claro */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .testimonios blockquote {
+    font-size: 1.2rem;
+    margin: 20px 0;
     font-style: italic;
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #bbb;
-    border-left: 4px solid #1e2a47; /* Azul oscuro */
-    padding-left: 20px;
+    color: #64b5f6;
 }
 
 /* Sección de contacto */
 #contacto {
-    background-color: #2c3e6f; /* Azul oscuro */
-    padding: 60px 20px;
+    background-color: #1a1a1a;
+    padding: 50px 20px;
     text-align: center;
 }
 
 #contacto h2 {
-    font-size: 32px;
+    font-size: 2.5rem;
     margin-bottom: 30px;
-    font-weight: bold;
-    color: #e0e0e0; /* Texto claro */
 }
 
 #contacto p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #dcdcdc;
-}
-
-.cta-button {
-    background-color: #5d6b8d; /* Azul intermedio */
-    padding: 15px 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: #3b4a6b; /* Azul más oscuro */
-    transform: scale(1.05);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 /* Pie de página */
 footer {
-    background-color: #121212; /* Fondo negro */
-    color: white;
+    background-color: #121212;
+    color: #64b5f6;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
-footer p {
-    font-size: 16px;
-}
-
-/* Media queries para dispositivos móviles y tabletas */
-
-/* Para dispositivos de tamaño medio (tabletas en modo paisaje o pantallas medianas) */
-@media (max-width: 1024px) {
-    .servicios-lista {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    }
-
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-
-    #bienvenida h1 {
-        font-size: 36px;
-    }
-
-    #servicios h2, #experiencia h2, #contacto h2 {
-        font-size: 28px;
-    }
-}
-
-/* Para dispositivos pequeños (teléfonos móviles en modo vertical) */
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-    #bienvenida h1 {
-        font-size: 32px;
-    }
-
-    #bienvenida p {
-        font-size: 18px;
-    }
-
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-
-    .servicios-lista {
-        grid-template-columns: 1fr; /* Una columna */
-    }
-
+    /* Barra de navegación */
     nav ul {
         flex-direction: column;
-        justify-content: space-around;
-        margin-top: 20px;
+        padding: 20px 0;
     }
 
-    nav li {
+    nav ul li {
         margin: 10px 0;
     }
 
-    #servicios h2, #experiencia h2, #contacto h2 {
-        font-size: 24px;
+    /* Sección de bienvenida */
+    #bienvenida h1 {
+        font-size: 2.5rem;
+    }
+
+    #bienvenida p {
+        font-size: 1.1rem;
+    }
+
+    /* Sección de servicios */
+    .servicios-lista {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Sección de experiencia */
+    .testimonios blockquote {
+        font-size: 1rem;
+    }
+
+    /* Sección de contacto */
+    #contacto h2 {
+        font-size: 2rem;
+    }
+
+    #contacto p {
+        font-size: 1.1rem;
     }
 }
 
-/* Para dispositivos muy pequeños (teléfonos móviles pequeños) */
+/* Responsividad para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
-    #bienvenida h1 {
-        font-size: 28px;
+    body {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem;
     }
 
     .cta-button {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 
-    #servicios h2, #experiencia h2, #contacto h2 {
-        font-size: 22px;
+    .servicio p {
+        font-size: 1rem;
     }
 
-    nav a {
-        font-size: 16px;
+    footer {
+        padding: 10px 0;
+        font-size: 1rem;
     }
 }
-
 

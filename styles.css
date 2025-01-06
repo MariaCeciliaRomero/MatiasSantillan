@@ -1,13 +1,20 @@
 /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
     color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Espacio para la barra de navegación fija */
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -15,115 +22,175 @@ body {
 
 /* Encabezado y navegación */
 header {
-    background-color: #007bff;
+    background-color: #1A73E8; /* Color vibrante */
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffd700;
 }
 
 /* Sección de bienvenida */
 #bienvenida {
     text-align: center;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #1A73E8, #0A58CA); /* Gradiente de color */
     color: white;
-    padding: 100px 0 50px 0;
+    padding: 150px 20px 50px 20px;
+    background-size: cover;
 }
 
 #bienvenida h1 {
-    font-size: 36px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#bienvenida p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
-    display: inline-block;
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
     border-radius: 5px;
-    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }
 
 /* Sección de servicios */
 #servicios {
     background-color: #f9f9f9;
-    padding: 50px 0;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 #servicios h2 {
-    text-align: center;
     font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
 }
 
 .servicios-lista {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .servicio {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicio h3 {
     font-size: 24px;
+    color: #1A73E8;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 16px;
+    color: #555;
+}
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Sección de experiencia */
 #experiencia {
     background-color: #eeeeee;
-    padding: 50px 0;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 #experiencia h2 {
-    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
 }
 
 .testimonios blockquote {
     font-style: italic;
     margin-bottom: 20px;
+    font-size: 18px;
+    color: #777;
+    border-left: 4px solid #1A73E8;
+    padding-left: 20px;
 }
 
 /* Sección de contacto */
 #contacto {
-    background-color: #ffffff;
-    padding: 50px 0;
+    background-color: white;
+    padding: 60px 20px;
     text-align: center;
 }
 
 #contacto h2 {
     font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contacto p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FF6F61;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #E55F51;
+    transform: scale(1.05);
 }
 
 /* Pie de página */
@@ -131,5 +198,46 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: 40px;
 }
+
+footer p {
+    font-size: 16px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .servicios-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #bienvenida h1 {
+        font-size: 30px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    #servicios h2, #experiencia h2, #contacto h2 {
+        font-size: 28px;
+    }
+
+    .servicios-lista {
+        grid-template-columns: 1fr;
+    }
+}
+

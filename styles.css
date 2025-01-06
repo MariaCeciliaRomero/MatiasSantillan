@@ -107,7 +107,7 @@ nav a:hover {
 
 .servicios-lista {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     gap: 30px;
     margin-top: 20px;
 }
@@ -207,25 +207,12 @@ footer p {
     font-size: 16px;
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
+/* Media queries para dispositivos móviles y tabletas */
+
+/* Para dispositivos de tamaño medio (tabletas en modo paisaje o pantallas medianas) */
+@media (max-width: 1024px) {
     .servicios-lista {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #bienvenida h1 {
-        font-size: 30px;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     }
 
     .cta-button {
@@ -233,12 +220,67 @@ footer p {
         font-size: 16px;
     }
 
+    #bienvenida h1 {
+        font-size: 36px;
+    }
+
     #servicios h2, #experiencia h2, #contacto h2 {
         font-size: 28px;
     }
+}
+
+/* Para dispositivos pequeños (teléfonos móviles en modo vertical) */
+@media (max-width: 768px) {
+    #bienvenida h1 {
+        font-size: 32px;
+    }
+
+    #bienvenida p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
 
     .servicios-lista {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    #servicios h2, #experiencia h2, #contacto h2 {
+        font-size: 24px;
     }
 }
+
+/* Para dispositivos muy pequeños (teléfonos móviles pequeños) */
+@media (max-width: 480px) {
+    #bienvenida h1 {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #servicios h2, #experiencia h2, #contacto h2 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
 

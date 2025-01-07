@@ -225,24 +225,32 @@ footer {
     }
 }
 
-/* Estilo básico para el título y la animación */
+/* Efecto de máquina de escribir */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Aplicamos el efecto al título */
 #titulo {
-    transition: transform 0.5s ease; /* Transición para la animación de escala */
+    display: inline-block;
+    overflow: hidden; /* Para ocultar lo que está fuera */
+    white-space: nowrap; /* Para que el texto no se divida */
+    border-right: 3px solid black; /* Simula el cursor */
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace; /* Estilo de máquina de escribir */
+    animation: typing 3s steps(30) 1s 1 normal both, blinkCaret 0.75s step-end infinite; /* Se aplica la animación */
 }
 
-#titulo:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento cuando se pasa el mouse */
+/* Efecto de parpadeo del cursor */
+@keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
 }
 
-.cta-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #45a049;
-}
 

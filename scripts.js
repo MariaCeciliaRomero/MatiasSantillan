@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efecto de tipeo (escritura en tiempo real)
+// Efecto máquina de escribir
 document.addEventListener("DOMContentLoaded", function() {
     const texto = "Matías Santillán - Asistente Virtual Especializado";
     let index = 0;
@@ -18,12 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Verificamos si el título está disponible
     if (titulo) {
-        // Función para escribir el texto lentamente
+        // Función para escribir el texto lentamente, con el efecto de máquina de escribir
         function escribirTexto() {
             if (index < texto.length) {
+                // Añadir una letra a la vez al contenido del título
                 titulo.innerHTML += texto.charAt(index);
                 index++;
-                setTimeout(escribirTexto, 100); // Tiempo entre cada letra
+                // Retraso entre cada letra, para simular el efecto de máquina de escribir
+                setTimeout(escribirTexto, 150); // Ajusta el tiempo para más rápido o lento
             }
         }
 
@@ -32,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("No se encontró el elemento con id 'titulo'.");
     }
 });
+

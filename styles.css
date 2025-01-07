@@ -234,23 +234,3 @@ footer {
         width: 100%;
     }
 }
-
-/* Aplicamos el efecto al título */
-#titulo {
-    display: inline-block;
-    overflow: hidden; /* Para ocultar lo que está fuera */
-    white-space: nowrap; /* Para que el texto no se divida */
-    border-right: 3px solid black; /* Simula el cursor */
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace; /* Estilo de máquina de escribir */
-    animation: typing 3s steps(30) 1s 1 normal both, blinkCaret 0.75s step-end infinite; /* Se aplica la animación */
-}
-
-/* Efecto de parpadeo del cursor */
-@keyframes blinkCaret {
-    50% {
-        border-color: transparent;
-    }
-}
-
-

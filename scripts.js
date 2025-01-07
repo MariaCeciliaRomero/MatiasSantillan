@@ -9,3 +9,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Efecto de tipeo (escritura en tiempo real)
+document.addEventListener("DOMContentLoaded", function() {
+    const texto = "Matías Santillán - Asistente Virtual Especializado";
+    let index = 0;
+    const titulo = document.getElementById("titulo");
+
+    // Función para escribir el texto lentamente
+    function escribirTexto() {
+        if (index < texto.length) {
+            titulo.innerHTML += texto.charAt(index);
+            index++;
+            setTimeout(escribirTexto, 100); // Tiempo entre cada letra
+        }
+    }
+
+    escribirTexto();
+});
+
